@@ -30,8 +30,10 @@ const verificarEnvio = (e) => {
     if (verificarNumeroIngresado(numeroIngresado)) {
         if(adivinoNumero(numeroIngresado,numeroGenerado)){
             alert(`Adivinaste, el número era ${numeroGenerado}`);
+            document.getElementById('formNumero').value="";
         }else{
             alert(`Fallaste, el número era ${numeroGenerado}, intentalo de nuevo`);
+            document.getElementById('formNumero').value="";
         }
         console.log(formNumero.value);
     } else {
